@@ -1,14 +1,16 @@
 defmodule ISOBMFFLang do
   @moduledoc """
-  ISO based media file format derived formats such as apples MOV and MPEG's MP4 pack language infromation it 16bit binaries.
-  How these language codes are packed varies though from format to format, apple has a table that they enforce in MOV while
-  mp4 uses a tecneque of packing 3 character ISO 639-2/T language codes into 3 uint5 that they then shift and add.
+  ISO based media file format derived formats such as Apples MOV and MPEG's MP4 pack language infromation in 16bit binaries.
+  How these language codes are packed varies though from format to format, Apple has a table of QuickTime language codes that
+  they enforce in the MOV format while MP4 uses a technique of packing 3 character ISO 639-2/T language codes into 3 unsigned
+  5 bit integers that they then shift and add.
 
   Sounds complicated? You would be right, this hex is meant to abstract away the complexity and get right down to business.
 
   At your disposal you have several convenience functions, they all do the same thing but take different types of input.
-  If you have the language int packed as a 16 bit bitstring straight from a mp4 container use #int16_to_lang, if you've unpacked
-  it to a Elixir integer use #int_to_lang. You get the picture.
+  If you have the language int packed as a 16 bit bitstring straight from a MP4 container use `#int16_to_lang`, if you've unpacked
+  it to a Elixir integer use `#int_to_lang` or if you are presented with the raw 15 bit bitstring use `#int15_to_lang`.
+  You get the picture the result will always be the same.
 
   ## Examples
 
