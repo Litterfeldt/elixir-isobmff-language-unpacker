@@ -27,6 +27,7 @@ iex> ISOBMFFLang.int16_to_lang(<<0::1, 21956::15>>)
 ```
 
 ## Installation
+See [package info on hex.pm](https://hex.pm/packages/isobmff_lang)
 
 The package can be installed by adding `:isobmff_lang` to your list of dependencies in `mix.exs`:
 
