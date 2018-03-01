@@ -11,6 +11,10 @@ If you have the language int packed as a 16 bit bitstring straight from a MP4 co
 it to a Elixir integer use `#int_to_lang` or if you are presented with the raw 15 bit bitstring use `#int15_to_lang`.
 You get the picture, the result will always be the same.
 
+
+## Documentation
+https://hexdocs.pm/isobmff_lang/0.1.0/ISOBMFFLang.html#content
+
 ## Examples
 ```elixir
 # QuickTime language code value for swedish (MOV container)
@@ -41,5 +45,5 @@ mix test
 ```
 
 ### References:
-[Quicktime language codes](https://developer.apple.com/library/content/documentation/QuickTime/QTFF/QTFFChap4/qtff4.html#//apple_ref/doc/uid/TP40000939-CH206-34353)
-[ISO language code packing](https://developer.apple.com/library/content/documentation/QuickTime/QTFF/QTFFChap4/qtff4.html#//apple_ref/doc/uid/TP40000939-CH206-35133)
+- [Quicktime language codes](https://developer.apple.com/library/content/documentation/QuickTime/QTFF/QTFFChap4/qtff4.html#//apple_ref/doc/uid/TP40000939-CH206-34353)
+- [ISO language code packing](https://developer.apple.com/library/content/documentation/QuickTime/QTFF/QTFFChap4/qtff4.html#//apple_ref/doc/uid/TP40000939-CH206-35133)
